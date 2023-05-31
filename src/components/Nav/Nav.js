@@ -1,6 +1,7 @@
 // Goes across all visable pages
 import "./Nav.scss";
 import logo from "../../assets/images/logo-no-background.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -9,9 +10,15 @@ const Nav = () => {
         <img src={logo} alt="Logo" className="nav__logo" />
         <div className="nav__internal">
           <input className="nav__input" placeholder="Discover" type="text" />
-          <div className="nav__link">Home</div>
-          <div className="nav__link">New Event</div>
-          <div className="nav__link">My Events</div>
+          <Link to={"/"} className="nav__link">
+            Home
+          </Link>
+          <Link to={"/EventForm"} className="nav__link">
+            New Event
+          </Link>
+          <Link to={"/404"} className="nav__link">
+            My Events
+          </Link>
           <img
             src="https://placehold.jp/100x100.png"
             alt="placeholder"
