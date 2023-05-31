@@ -1,0 +1,41 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.form {
+  @include flex(column, space-between);
+  align-items: center;
+  width: 100%;
+  background-color: $secondary-background-color;
+  border: 0.2rem solid $border-color;
+
+  @include media-desktop {
+    width: $maximum-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-decoration: underline;
+    margin: 1rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 1rem;
+  }
+}
+
+.event-form {
+  @include flex(column, space-between);
+  align-items: center;
+  width: 100%;
+  background-color: $secondary-background-color;
+  border: 0.2rem solid $border-color;
+
+  @include media-desktop {
+    width: $maximum-width;
+    margin: 0 auto;
+  }
+
+  &__input {
+    margin-bottom: 0.5rem;
+  }
+}

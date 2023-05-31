@@ -1,3 +1,4 @@
+@use "./variables" as *;
 *,
 *::before,
 *::after {
@@ -13,6 +14,7 @@ body {
   /* re-adjusts font-size back to 16px */
   font-size: 1.6rem;
   margin: 0;
+  color: $primary-text-color;
 }
 
 h3,
