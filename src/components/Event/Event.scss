@@ -1,0 +1,28 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.event {
+  @include flex(row, space-between);
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: $primary-background-color;
+  border-radius: 0.5rem;
+
+  &__internal {
+    @include flex(column, space-between);
+  }
+  &__title {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  &__date {
+    font-size: 1.5rem;
+  }
+  &__host {
+    font-size: 1.5rem;
+  }
+  &__thumbnail {
+    border-radius: 0.5rem;
+  }
+}

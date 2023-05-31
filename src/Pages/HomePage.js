@@ -1,9 +1,9 @@
-import Nav from "../components/Nav/Nav";
+import EventsArea from "../components/EventsArea/EventsArea";
 
 const HomePage = () => {
   return (
     <>
-      <Nav />
+      <EventsArea />
     </>
   );
 };

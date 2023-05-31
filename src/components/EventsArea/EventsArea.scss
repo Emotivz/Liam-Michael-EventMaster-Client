@@ -1,0 +1,21 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.events {
+  @include flex(column, space-between);
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem solid $border-color;
+  background-color: $secondary-background-color;
+
+  @include media-desktop {
+    width: $maximum-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    align-self: center;
+    text-decoration: underline;
+    margin-top: 0;
+  }
+}
