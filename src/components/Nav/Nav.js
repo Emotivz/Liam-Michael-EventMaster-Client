@@ -1,4 +1,6 @@
 // Goes across all visable pages
+import "./Nav.scss";
+
 const Nav = () => {
   return (
     <header className="nav__background">
@@ -9,11 +11,15 @@ const Nav = () => {
           className="nav__logo"
         />
         <div className="nav__internal">
-          <input placeholder="Discover Events" type="text" />
+          <input className="nav__input" placeholder="Discover" type="text" />
           <div className="nav__link">Home</div>
-          <div className="nav__link">Create Event</div>
+          <div className="nav__link">Create</div>
           <div className="nav__link">My Events</div>
-          <div>UserIcon</div>
+          <img
+            src="https://placehold.jp/100x100.png"
+            alt="placeholder"
+            className="nav__icon"
+          />
         </div>
       </nav>
     </header>
