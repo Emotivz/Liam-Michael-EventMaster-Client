@@ -17,18 +17,13 @@
     text-decoration: underline;
     margin: 1rem;
   }
-
-  &__subtitle {
-    margin-bottom: 1rem;
-  }
 }
 
-.event-form {
+.rsvp-form {
   @include flex(column, space-between);
   align-items: center;
   width: 100%;
   background-color: $secondary-background-color;
-  border-top: 0.2rem solid $border-color;
 
   @include media-desktop {
     width: $maximum-width;

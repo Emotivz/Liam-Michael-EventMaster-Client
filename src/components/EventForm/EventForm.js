@@ -20,7 +20,7 @@ const EventForm = () => {
         <label htmlFor="address">Address</label>
         <input name="address" type="address" className="event-form__input" />
         <label htmlFor="mobile">Phone number</label>
-        <input name="mobile" type="text" className="event-form__input" />
+        <input name="mobile" type="number" className="event-form__input" />
         <label htmlFor="email">Email</label>
         <input name="email" type="email" className="event-form__input" />
         <label htmlFor="">Optional Image:</label>
