@@ -8,7 +8,6 @@ const Event = () => {
         <p className="event__date">date/time</p>
         <p className="event__host">host</p>
       </div>
-
       <img
         src="https://placehold.jp/100x100.png"
         alt="thumbnail"

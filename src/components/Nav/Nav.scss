@@ -6,6 +6,10 @@
   align-items: center;
   width: 100%;
 
+  @include media-tablet {
+    @include flex(row, space-between);
+  }
+
   @include media-desktop {
     width: $maximum-width;
     margin: 0 auto;
@@ -20,6 +24,10 @@
   &__logo {
     margin: 1rem;
     width: 100%;
+
+    @include media-tablet {
+      width: 20%;
+    }
   }
 
   &__internal {
@@ -28,12 +36,13 @@
     border-top: 0.2rem solid $border-color;
     width: 100%;
 
-    // @include media-tablet {
-    //   width: 50%;
-    // }
+    @include media-tablet {
+      width: 60%;
+      border-top: none;
+    }
 
     // @include media-desktop {
-    //   width: 40%;
+    //   width: 50%;
     // }
   }
 
@@ -46,6 +55,9 @@
     //   color: #dbb000;
     //   border-radius: 1rem;
     // }
+    @include media-tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__input {
@@ -53,6 +65,14 @@
     height: 2rem;
     font-size: 0.2rem;
     border-radius: 1rem;
+
+    @include media-tablet {
+      width: 10rem;
+    }
+
+    @include media-desktop {
+      width: 15rem;
+    }
   }
 
   &__icon {

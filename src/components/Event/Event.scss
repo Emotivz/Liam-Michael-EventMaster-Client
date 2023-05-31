@@ -9,6 +9,15 @@
   background-color: $primary-background-color;
   border-radius: 0.5rem;
 
+  @include media-tablet {
+    width: 75%;
+    margin: 1rem auto;
+  }
+
+  @include media-desktop {
+    width: 60%;
+  }
+
   &__internal {
     @include flex(column, space-between);
   }
