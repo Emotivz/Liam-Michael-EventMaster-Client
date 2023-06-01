@@ -13,8 +13,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Event" element={<EventPage />} />
-        <Route path="/EventForm" element={<EventFormpage />} />
+        <Route path="/event" element={<EventPage />} />
+        <Route path="/event-form" element={<EventFormpage />} />
         <Route path="*" element={<DeadEnd />} />
       </Routes>
     </BrowserRouter>

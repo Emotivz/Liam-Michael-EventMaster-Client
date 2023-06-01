@@ -13,7 +13,7 @@ const Nav = () => {
           <Link to={"/"} className="nav__link">
             Home
           </Link>
-          <Link to={"/EventForm"} className="nav__link">
+          <Link to={"/event-form"} className="nav__link">
             New Event
           </Link>
           <Link to={"/404"} className="nav__link">
