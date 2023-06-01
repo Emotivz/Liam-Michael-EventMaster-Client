@@ -3,6 +3,7 @@ import "./DetailedEvent.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../util/apiData";
+import moment from "moment";
 
 const DetailedEvent = () => {
   const [event, setEvent] = useState(null);
@@ -41,7 +42,7 @@ const DetailedEvent = () => {
       <div className="detailed-e__internal">
         <h3 className="detailed-e__title">{event.title}</h3>
         <p className="detailed-e__info">{event.host}</p>
-        <p className="detailed-e__info">{event.date}</p>
+        <p className="detailed-e__info">{moment(event.date).format("LLLL")}</p>
         <p className="detailed-e__info">Time: _____ to _____</p>
         <p className="detailed-e__info">{event.address}</p>
 

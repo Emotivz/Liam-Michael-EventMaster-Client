@@ -2,6 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import "./Event.scss";
 import { timeAway } from "../../util/time";
+import moment from "moment";
 
 const Event = ({ event }) => {
   return (
@@ -9,7 +10,7 @@ const Event = ({ event }) => {
       <article className="event">
         <div className="event__internal">
           <h3 className="event__title">{event.title}</h3>
-          <p className="event__date">{timeAway(event.date)}</p>
+          <p className="event__date">{moment(event.date).format("LLLL")}</p>
           <p className="event__host">{event.host}</p>
         </div>
         <img
