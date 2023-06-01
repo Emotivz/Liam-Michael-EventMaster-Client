@@ -1,10 +1,40 @@
 // import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../util/apiData";
 import "./EventForm.scss";
+import axios from "axios";
+import { useState } from "react";
 
 //form to create a event
 const EventForm = () => {
+  const [posted, setPosted] = useState("");
+  const navigate = useNavigate();
+
+  const sendEvent = (event) => {
+    axios
+      .post(`${API_URL}/events`, event)
+      .then((response) => {
+        setPosted("Event has been posted!!!!");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
+    let newEvent = {
+      title: e.target.title.value,
+      date: Math.floor(new Date(e.target.date.value).getTime()),
+      address: e.target.address.value,
+      phoneNumber: e.target.phoneNumber.value,
+      email: e.target.email.value,
+      details: e.target.details.value,
+    };
+    sendEvent(newEvent);
+    setTimeout(() => {
+      navigate("/");
+    }, 1500);
   };
 
   return (
@@ -16,16 +46,6 @@ const EventForm = () => {
         className="event-form"
         onSubmit={(e) => {
           submitHandler(e);
-          let newEvent = {
-            title: e.target.title.value,
-            date: e.target.date.value,
-            address: e.target.address.value,
-            phoneNumber: e.target.phoneNumber.value,
-            email: e.target.email.value,
-            details: e.target.details.value,
-          };
-
-          console.log(newEvent);
         }}
       >
         <label htmlFor="title">Title:</label>
@@ -42,9 +62,9 @@ const EventForm = () => {
         <input name="" type="file" className="event-form__input" />
         <label htmlFor="details">Additional Details</label>
         <textarea name="details" type="text" className="event-form__input" />
-
         <input type="submit" className="event-form__submit" />
       </form>
+      <p className="event-form__posted">{posted}</p>
     </section>
   );
 };

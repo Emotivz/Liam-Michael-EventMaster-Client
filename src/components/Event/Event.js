@@ -13,11 +13,7 @@ const Event = ({ event }) => {
           <p className="event__date">{moment(event.date).format("LLLL")}</p>
           <p className="event__host">{event.host}</p>
         </div>
-        <img
-          src="https://placehold.jp/100x100.png"
-          alt="thumbnail"
-          className="event__thumbnail"
-        />
+        <img src={event.image} alt="thumbnail" className="event__thumbnail" />
       </article>
     </Link>
   );
