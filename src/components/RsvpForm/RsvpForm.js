@@ -10,6 +10,8 @@ const RsvpForm = () => {
         <input name="Name" type="text" className="rsvp-form__input" />
         <label htmlFor="mobile">Phone number</label>
         <input name="mobile" type="number" className="rsvp-form__input" />
+
+        <input type="submit" className="event-form__submit" />
       </form>
     </section>
   );
