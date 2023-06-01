@@ -17,6 +17,10 @@
   @include media-desktop {
     width: 60%;
   }
+  &__link {
+    text-decoration: none;
+    color: $primary-text-color;
+  }
 
   &__internal {
     @include flex(column, space-between);

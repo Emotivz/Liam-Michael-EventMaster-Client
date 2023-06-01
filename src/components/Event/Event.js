@@ -1,19 +1,24 @@
 // displays all the event data, dependent on where its being shown
+import { Link } from "react-router-dom";
 import "./Event.scss";
-const Event = () => {
+import { timeAway } from "../../util/time";
+
+const Event = ({ event }) => {
   return (
-    <article className="event">
-      <div className="event__internal">
-        <h3 className="event__title">title</h3>
-        <p className="event__date">date/time</p>
-        <p className="event__host">host</p>
-      </div>
-      <img
-        src="https://placehold.jp/100x100.png"
-        alt="thumbnail"
-        className="event__thumbnail"
-      />
-    </article>
+    <Link to={`event/${event.id}`} className="event__link">
+      <article className="event">
+        <div className="event__internal">
+          <h3 className="event__title">{event.title}</h3>
+          <p className="event__date">{timeAway(event.date)}</p>
+          <p className="event__host">{event.host}</p>
+        </div>
+        <img
+          src="https://placehold.jp/100x100.png"
+          alt="thumbnail"
+          className="event__thumbnail"
+        />
+      </article>
+    </Link>
   );
 };
 
