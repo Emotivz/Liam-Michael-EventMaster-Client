@@ -2,8 +2,8 @@
 import "./RsvpForm.scss";
 const RsvpForm = () => {
   return (
-    <section className="form">
-      <h2 className="form__title"> Reserve your spot</h2>
+    <section className="rsvp">
+      <h2 className="rsvp__title"> Reserve your spot</h2>
       <p>Don't miss out on the potential party of the year</p>
       <form className="rsvp-form">
         <label htmlFor="Name">Name</label>

@@ -1,0 +1,39 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.detailed-e {
+  @include flex(row, space-between);
+  width: 100%;
+  padding: 0.5rem;
+  border-left: 0.2rem solid $border-color;
+  border-right: 0.2rem solid $border-color;
+  background-color: $secondary-background-color;
+
+  @include media-desktop {
+    width: $maximum-width;
+    margin: 0 auto;
+  }
+
+  &__internal {
+    @include flex(column, space-between);
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  &__info {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__thumbnail {
+    border-radius: 0.5rem;
+  }
+
+  &__contact {
+    font-size: 1.75rem;
+    text-decoration: underline;
+  }
+}

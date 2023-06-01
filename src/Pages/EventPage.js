@@ -1,10 +1,10 @@
-import Event from "../components/Event/Event";
+import DetailedEvent from "../components/DetailedEvent/DetailedEvent";
 import RsvpForm from "../components/RsvpForm/RsvpForm";
 
 const EventPage = () => {
   return (
     <>
-      <Event /> {/* create Detailed event */}
+      <DetailedEvent /> {/* create Detailed event */}
       <RsvpForm />
     </>
   );
