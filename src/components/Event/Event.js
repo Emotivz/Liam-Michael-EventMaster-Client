@@ -1,11 +1,11 @@
 // displays all the event data, dependent on where its being shown
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Event.scss";
 import { timeAway } from "../../util/time";
 
 const Event = ({ event }) => {
   return (
-    <Link to={`event/${event.id}`} className="event__link">
+    <Link to={`events/${event.id}`} className="event__link">
       <article className="event">
         <div className="event__internal">
           <h3 className="event__title">{event.title}</h3>

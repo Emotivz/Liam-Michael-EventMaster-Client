@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 // Displays the events on the main page using the event.js component
-const EventsArea = ({ eventsJSON }) => {
+const EventsArea = ({}) => {
   //initilise state
   const [events, setEvents] = useState(null);
 

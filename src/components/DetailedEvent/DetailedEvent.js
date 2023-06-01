@@ -1,6 +1,41 @@
+import { useParams } from "react-router-dom";
 import "./DetailedEvent.scss";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { API_URL } from "../../util/apiData";
 
-const DetailedEvent = ({ event }) => {
+const DetailedEvent = () => {
+  const [event, setEvent] = useState(null);
+  const { eventId } = useParams();
+
+  //axios call to fetch event details
+  const fetchEvent = () => {
+    axios
+      .get(`${API_URL}/events/${eventId}`)
+      .then((response) => {
+        setEvent(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // fetch event details on page load
+  useEffect(() => {
+    fetchEvent();
+  }, []);
+
+  // when event details have been set into state rerender
+  useEffect(() => {
+    if (!event) {
+      return;
+    }
+  }, [event]);
+
+  if (!event) {
+    return <p>Loading event...</p>;
+  }
+
   return (
     <article className="detailed-e">
       <div className="detailed-e__internal">

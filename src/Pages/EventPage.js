@@ -6,7 +6,7 @@ import events from "../data/sample.json";
 const EventPage = () => {
   return (
     <>
-      <DetailedEvent event={events[0]} /> {/* create Detailed event */}
+      <DetailedEvent /> {/* create Detailed event */}
       <RsvpForm />
       <RsvpList events={events[0]} />
     </>
