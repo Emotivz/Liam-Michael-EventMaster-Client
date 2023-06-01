@@ -9,7 +9,18 @@
     "email": "murilosouza@gmail.com",
     "image": "../files/dickens.jpg",
     "details": "We are excited to bring the Dickens Summer Weekend to you this Summer in collaboration with the Medway River Lit festival! 🎉 We have a number of exciting events taking place across the whole weekend so that the event matches your great expectations. Including: //n🎩Dickensian parades & performances //n🎠Victorian children’s fun fair rides //n☕Victorian tea tent & food stalls //n🎪Outdoor games & craft tents //n🎶 Live music & so much more //n🏰 Located in the breathtaking Rochester castle gardens & surrounding areas.",
-    "attending": 1328
+    "attending": [
+      { "id": "111111", "name": "Liam Miller", "mobile": "07885597055" },
+      { "id": "111112", "name": "John doe", "mobile": "07885597055" },
+      {
+        "id": "111113",
+        "name": "Johnathan doenuticus",
+        "mobile": "07885597055"
+      },
+      { "id": "111114", "name": "Michael Orimolade", "mobile": "07885597055" },
+      { "id": "111115", "name": "John doe", "mobile": "07885597055" },
+      { "id": "111116", "name": "John doe", "mobile": "07885597055" }
+    ]
   },
   {
     "id": "3b6f1a52-b869-4b81-ba9a-6bf5eb359830",
