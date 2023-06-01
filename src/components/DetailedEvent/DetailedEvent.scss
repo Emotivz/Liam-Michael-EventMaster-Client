@@ -9,6 +9,10 @@
   border-right: 0.2rem solid $border-color;
   background-color: $secondary-background-color;
 
+  @include media-tablet {
+    @include flex(row, space-around);
+  }
+
   @include media-desktop {
     width: $maximum-width;
     margin: 0 auto;
@@ -30,6 +34,14 @@
 
   &__thumbnail {
     border-radius: 0.5rem;
+    width: 10rem;
+    height: 10rem;
+
+    @include media-tablet {
+      border-radius: 1rem;
+      width: 25rem;
+      height: 25rem;
+    }
   }
 
   &__contact {

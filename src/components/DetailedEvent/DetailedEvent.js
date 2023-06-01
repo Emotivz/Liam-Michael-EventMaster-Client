@@ -14,13 +14,12 @@ const DetailedEvent = () => {
         <p className="detailed-e__info">Mobile: </p>
         <p className="detailed-e__info">Email: </p>
       </div>
-      <div>
-        <img
-          src="https://placehold.jp/100x100.png"
-          alt="thumbnail"
-          className="event__thumbnail"
-        />
-      </div>
+
+      <img
+        src="https://placehold.jp/100x100.png"
+        alt="thumbnail"
+        className="detailed-e__thumbnail"
+      />
     </article>
   );
 };

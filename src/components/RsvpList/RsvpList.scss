@@ -1,0 +1,29 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.rsvp-list {
+  @include flex(column, space-between);
+  align-items: center;
+  width: 100%;
+  background-color: $secondary-background-color;
+  border: 0.2rem solid $border-color;
+
+  @include media-tablet {
+    @include flex(row, space-between);
+  }
+
+  @include media-desktop {
+    width: $maximum-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &__list {
+    list-style-type: none;
+    @include flex();
+    flex-wrap: wrap;
+  }
+}
